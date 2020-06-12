@@ -7,7 +7,7 @@ Software engineering team generator command line application. The application wi
 
 
 ## VISUALS 
-![gif]()
+![gif](./images/hw10dem.gif)
 ## INSTALLATION 
 Node.js and Visual Studios 
 ## USAGE 
