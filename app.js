@@ -155,7 +155,7 @@ function employeePrompts() {
                });
          }
       });
-   // console.log(employeeList);
+   
 }
 
 function generatePage() {
