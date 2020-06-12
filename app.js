@@ -10,7 +10,74 @@ const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
 
+let employeeID = 1;
+let employeeList = [];
 
+function managerPrompts() {
+   inquirer
+      .prompt([
+         {
+            type: "input",
+            message: "Manager name: ",
+            name: "managerName"
+         },
+         {
+            type: "input",
+            message: "What is your email address?",
+            name: "managerEmail"
+         },
+         {
+            type: "input",
+            message: "What is your office number?",
+            name: "managerOffice"
+         }
+      ])
+      .then(function(response) {
+         let managerName = response.managerName;
+         let managerEmail = response.managerEmail;
+         let managerOffice = response.managerOffice;
+         let manager = new Manager(
+            managerName,
+            employeeID,
+            managerEmail,
+            managerOffice
+         );
+
+         employeeList.push(manager);
+
+         employeeID++;
+
+         console.log(`
+         ~~~~~~~~~~~~~~
+         Now we'll collect information from you about your employees
+         ~~~~~~~~~~~~~~
+         `);
+
+         employeePrompts();
+      });
+}
+
+function employeePrompts() {
+   inquirer
+      .prompt([
+         {
+            type: "list",
+            message: "What is the employee's role?",
+            choices: ["Engineer", "Intern"],
+            name: "employeeType"
+         },
+         {
+            type: "input",
+            message: "What is the employee's name?",
+            name: "employeeName"
+         },
+         {
+            type: "input",
+            message: "What is the employee's email address?",
+            name: "employeeEmail"
+         }
+      ])
+  
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
