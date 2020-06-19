@@ -12,7 +12,7 @@ Software engineering team generator command line application. The application wi
 ## INSTALLATION 
 Node.js and Visual Studios 
 ## USAGE 
-With the use of node.js and visual studio, this application can be used as a guide to create a list of employees along with information.
+With the use of node.js and visual studio, this application can be used as a guide to create a list of employees along with their information.
 ## SUPPORT 
 we all need help once in awhile
 
