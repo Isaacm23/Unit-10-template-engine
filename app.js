@@ -162,7 +162,7 @@ function generatePage() {
    let allCards = "";
 
    employeeList.forEach(item => {
-      let cardString = item.createCard();
+      let cardString = item;
       allCards += cardString;
    });
 
